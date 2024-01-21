@@ -1,0 +1,4 @@
+scikit-learn
+thefuzz
+tensorflow
+tensorflow-metal; sys_platform == 'darwin'
