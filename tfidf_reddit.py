@@ -9,7 +9,7 @@ if __name__ == '__main__':
 
     X_train, feature_names = load_dataset(verbose=True)
 
-    features_sums = X_train.sum(axis=0)
+    features_sums = X_train.sum(axis=0) # type: ignore
     features = sorted(list(zip(feature_names, features_sums.A1)), key=lambda kv: -kv[1])
 
     with open('./google-10000-english-usa.txt', 'r') as f: 
