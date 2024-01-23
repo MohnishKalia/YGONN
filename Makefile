@@ -1,8 +1,8 @@
 FILES = $(wildcard reddit_posts/*)
 
-all: card_matches.txt
+all: card_matches.json
 
-card_matches.txt: tfidf_reddit.py tfidf.py reddit_complex.txt
+card_matches.json: tfidf_reddit.py tfidf.py card_fuzz.py reddit_complex.txt
 	python ./tfidf_reddit.py
 
 reddit_complex.txt: preprocess_reddit.py $(FILES)

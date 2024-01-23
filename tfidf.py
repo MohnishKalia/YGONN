@@ -1,7 +1,9 @@
 # https://scikit-learn.org/stable/auto_examples/text/plot_document_classification_20newsgroups.html
 
 from time import time
+
 from sklearn.feature_extraction.text import TfidfVectorizer
+
 
 def size_mb(docs):
     return sum(len(s.encode("utf-8")) for s in docs) / 1e6

@@ -1,7 +1,7 @@
 venv/
 cards.cdb
-reddit_complex.txt
-card_matches.txt
+reddit_complex.*
+card_matches.*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
