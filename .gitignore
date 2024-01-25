@@ -2,6 +2,7 @@ venv/
 cards.cdb
 reddit_complex.*
 card_matches.*
+.DS_Store
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

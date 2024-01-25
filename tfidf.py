@@ -12,10 +12,13 @@ def load_dataset(filepath="reddit_complex.txt", verbose=False):
     with open(filepath, "r") as f:
         train_data = f.readlines()
 
+    with open('./google-10000-english-usa.txt', 'r') as f: 
+        common_words = [s.strip() for s in f.readlines()]
+
     # Extracting features from the training data using a sparse vectorizer
     t0 = time()
     vectorizer = TfidfVectorizer(
-        sublinear_tf=True, min_df=0.0, stop_words="english", analyzer='word', ngram_range=(1,3)
+        sublinear_tf=True, min_df=0.0, stop_words=common_words, analyzer='word', ngram_range=(1,3)
     )
     X_train = vectorizer.fit_transform(train_data)
     duration_train = time() - t0
